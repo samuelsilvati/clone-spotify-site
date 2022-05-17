@@ -163,7 +163,7 @@ main section article p a {
 }
 
 section.two {
-  background-image: url(assets/background2.svg);
+  background-image: url(background2.svg);
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: right center;
