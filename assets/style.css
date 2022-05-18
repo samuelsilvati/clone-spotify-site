@@ -304,10 +304,10 @@ footer div#social a svg:hover {
     position: absolute; 
     /* top: 0; */
     right: 0;
-    width: 315px;
-    height: 83vh;
-    margin: 0;
-    padding: 38px;
+    width: 100vw;
+    height: 95vh;
+    /* margin: 0;
+    padding: 0; */
     background: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
@@ -324,6 +324,7 @@ footer div#social a svg:hover {
   header .mobile-menu-list ul {
     gap: 0;
     margin: 0;
+    padding: 38px;
     flex-direction: column;
     align-items:flex-start;
     opacity: 1;
@@ -347,17 +348,18 @@ footer div#social a svg:hover {
   }
 
   header .mobile-menu-list .first-items {
-    font-size: 36px;
+    font-size: 28px;
   }
 
   header .mobile-menu-list .second-items {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 400;
   }
 
   header .mobile-menu-list .mobile-menu-logo {
     display: block;
     margin: 0;
+    padding: 38px;
     opacity: 1;
   }
 
@@ -403,16 +405,6 @@ footer div#social a svg:hover {
   section div {
     display: flex;
     flex-direction: column;
-  }
-
-  div#offer p {
-    background-color: #ffffff;
-    color: var(--color01);
-    font-size: 14px;
-    font-weight: 900;
-    padding: 4px 8px;
-    margin: 0;
-    border-radius: 4px;
   }
 
   main section article {
