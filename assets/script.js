@@ -9,8 +9,8 @@ class MobileNavbar {
   }
 
   animateLinks() {
-      this.navLinks.forEach((link, index) => {
-        console.log(index);
+      this.navLinks.forEach((link) => {
+        // console.log(link);
          link.style.animation ? (link.style.animation = "") : (link.style.animation = `navLinkFade 0.5s ease forwards 0.3s`);
       }); 
   }
@@ -39,7 +39,6 @@ const mobileNavbar = new MobileNavbar(
 ".animation-list",
 );
 mobileNavbar.init();
-
 
 ScrollReveal({
   origin: 'right',
