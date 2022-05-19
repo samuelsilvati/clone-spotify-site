@@ -16,7 +16,6 @@ class MobileNavbar {
   }
 
   handleClick() {
-      console.log(this);
       this.navList.classList.toggle(this.activeClass);
       this.mobileMenu.classList.toggle(this.activeClass);
       this.animateLinks();
@@ -37,6 +36,14 @@ class MobileNavbar {
 const mobileNavbar = new MobileNavbar(
 ".mobile-menu", 
 ".mobile-menu-list",
-".mobile-menu-list li",
+".animation-list",
 );
 mobileNavbar.init();
+
+
+ScrollReveal({
+  origin: 'right',
+  distance: '30px',
+  duration: 600})
+  .reveal('.offer, .nav-items');
+

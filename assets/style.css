@@ -78,6 +78,10 @@ header .mobile-menu-logo {
   display: none;
 }
 
+header .mobile-menu-list .line-menu {
+  display: none;
+}
+
 section {
   display: flex;
   justify-content: center;
@@ -283,14 +287,6 @@ footer div#social a svg:hover {
     height: 54px;
   }
 
-  /* div#cont-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 1170px;
-    margin: 0;
-    padding: 0 1px;
-  } */
   .mobile-menu div {
     width: 22px;
     height: 3px;
@@ -301,13 +297,12 @@ footer div#social a svg:hover {
   }
 
   header .mobile-menu-list {
-    position: absolute; 
-    /* top: 0; */
+    position: absolute;
+    top: 45px;
     right: 0;
     width: 100vw;
     height: 95vh;
-    /* margin: 0;
-    padding: 0; */
+    margin: 0;
     background: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
@@ -327,11 +322,19 @@ footer div#social a svg:hover {
     padding: 38px;
     flex-direction: column;
     align-items:flex-start;
-    opacity: 1;
   }
 
   header .mobile-menu-list ul li {
     padding-bottom: 25px;
+  }
+
+  header .animation-list {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    opacity: 0;
   }
 
   header .nav-items span {
@@ -339,12 +342,12 @@ footer div#social a svg:hover {
   }
 
   header .mobile-menu-list .line-menu {
+    display: block;
     width: 20px;
     height: 2px;
     background: #fff;
     margin: 4px;
     margin: 18px 0 40px 0;
-    opacity: 1;
   }
 
   header .mobile-menu-list .first-items {
@@ -360,7 +363,6 @@ footer div#social a svg:hover {
     display: block;
     margin: 0;
     padding: 38px;
-    opacity: 1;
   }
 
   header .nav-items li {
@@ -546,7 +548,7 @@ footer div#social a svg:hover {
 @keyframes navLinkFade {
   from {
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateX(100px);
   }
   to {
     opacity: 1;
