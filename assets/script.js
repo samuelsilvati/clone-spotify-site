@@ -1,44 +1,22 @@
-class MobileNavbar {
-  constructor(mobileMenu, navList, navLinks) {
-    this.mobileMenu = document.querySelector(mobileMenu);
-    this.navList = document.querySelector(navList);
-    this.navLinks = document.querySelectorAll(navLinks);
-    this.activeClass = "active";
+const mobileMenu = document.querySelector(".mobile-menu");
+const menuList = document.querySelector(".mobile-menu-list");
 
-    this.handleClick = this.handleClick.bind(this);
+mobileMenu.addEventListener("click", () => {
+  mobileMenu.classList.toggle("active");
+  menuList.classList.toggle("active");
+  if (menuList.classList.contains("active")) {
+    document.body.style.overflow = 'hidden';
+  }else {
+    document.body.style.overflow = 'auto';
   }
+})
 
-  animateLinks() {
-      this.navLinks.forEach((link) => {
-        // console.log(link);
-         link.style.animation ? (link.style.animation = "") : (link.style.animation = `navLinkFade 0.5s ease forwards 0.3s`);
-      }); 
-  }
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () =>{
+  mobileMenu.classList.remove("active");
+  menuList.classList.remove("active");
+  document.body.style.overflow = 'auto';  
+}))
 
-  handleClick() {
-      this.navList.classList.toggle(this.activeClass);
-      this.mobileMenu.classList.toggle(this.activeClass);
-      this.animateLinks();
-  }
-
-  addClickEvent() {
-    this.mobileMenu.addEventListener("click", this.handleClick);
-  }
-
-  init() {
-    if (this.mobileMenu) {
-      this.addClickEvent();
-    }
-    return this;
-  }
-}
-
-const mobileNavbar = new MobileNavbar(
-".mobile-menu", 
-".mobile-menu-list",
-".animation-list",
-);
-mobileNavbar.init();
 
 ScrollReveal({
   origin: 'right',
