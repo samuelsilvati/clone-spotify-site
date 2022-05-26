@@ -305,16 +305,26 @@ footer div#social a svg:hover {
 
 /* BR ======================================= */
 footer #br {
-  width: 100%;
-  text-align: right;
+  margin: 0;
+  padding: 0;
   /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 footer #br a {
+  margin: 0;
+  /* border: 1px solid red; */
   padding-right: 15px;
   color: var(--color13);
   font-size: 12px;
   text-decoration: none;
+}
+
+footer #br #globe {
+  margin-right: 8px;
 }
 
 /* BOTTON LINKS ======================================= */
@@ -692,16 +702,27 @@ footer span {
 
   /* BR ============================================= */
   footer #br {
-    width: 100%;
-    text-align: right;
+    margin: 0;
+    padding: 0;
     /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
 
   footer #br a {
+    margin: 0;
+    /* border: 1px solid red; */
     padding-right: 15px;
     color: var(--color13);
     font-size: 10px;
+    text-align: right;
     text-decoration: none;
+  }
+
+  footer #br #globe {
+    margin-right: 8px;
   }
 
   /* BOTTON LINKS ======================================= */
@@ -740,7 +761,7 @@ footer span {
     color: var(--color13);
     margin: 0 15px; 
   }
-  
+
   /* @keyframes navLinkFade {
     from {
       opacity: 0;
