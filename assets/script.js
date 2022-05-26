@@ -14,7 +14,7 @@ mobileMenu.addEventListener("click", () => {
 document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () =>{
   mobileMenu.classList.remove("active");
   menuList.classList.remove("active");
-  document.body.style.overflow = 'auto';  
+  document.body.style.overflowY = 'auto';  
 }))
 
 
