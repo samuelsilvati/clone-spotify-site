@@ -22,5 +22,5 @@ ScrollReveal({
   origin: 'right',
   distance: '30px',
   duration: 600})
-  .reveal('.offer, .nav-items');
+  .reveal('.offer');
 

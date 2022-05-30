@@ -409,10 +409,9 @@ footer span {
   }
 
   header .mobile-menu-list.active {
+    position: fixed;
     right: 0;
-    color: #fff;
-    /* overflow: hidden; */
-    /* position: fixed; */
+    overflow: hidden;
   }
 
   header .mobile-menu-list ul {
