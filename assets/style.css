@@ -410,6 +410,7 @@ footer span {
 
   header .mobile-menu-list.active {
     right: 0;
+    z-index: 100;
     /* overflow: hidden; */
     /* position: fixed; */
   }
