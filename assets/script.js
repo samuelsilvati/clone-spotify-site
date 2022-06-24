@@ -17,10 +17,3 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
   document.body.style.overflow = 'auto';  
 }))
 
-
-ScrollReveal({
-  origin: 'right',
-  distance: '30px',
-  duration: 600})
-  .reveal('.offer');
-

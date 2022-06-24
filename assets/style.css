@@ -88,6 +88,12 @@ header .mobile-menu-list .line-menu {
   display: none;
 }
 
+.animation-list {
+  opacity: 0;
+  transform: translateX(120px);
+  animation: menu_reveal .2s ease .2s forwards;
+}
+
 section {
   display: flex;
   justify-content: center;
@@ -293,8 +299,8 @@ footer #social a {
 }
 
 footer div#social a svg {
-  width: 34px;
-  height: 34px;
+  width: 52px;
+  height: 52px;
   padding: 10px;
   background-color: var(--color-social);
   border-radius: 100px;
@@ -364,6 +370,16 @@ footer span {
   margin: 0 15px 0 0; 
 }
 
+ /* key frames ======================================= */
+
+ @keyframes menu_reveal {
+    
+  to {
+      opacity: 1;
+      transform: translateX(0px);
+  }
+}
+
 /* ====================================================================================== */
 
 /* MEDIA QUERIES ======================================= */
@@ -406,12 +422,25 @@ footer span {
     align-items: flex-start;
     justify-content: space-between;
     transition: 0.2s;
+    /* opacity: 0; */
+    
   }
 
   header .mobile-menu-list.active {
     position: fixed;
     right: 0;
     overflow: hidden;
+    animation: menu_reveal .3s ease-in-out forwards;
+  }
+
+  .nav-items {
+    opacity: 0;
+    transform: translateX(120px);
+  }
+
+  .nav-items {
+    animation: menu_reveal .2s ease .1s forwards;
+    animation-delay: 1s;
   }
 
   header .mobile-menu-list ul {
@@ -758,7 +787,7 @@ footer span {
     margin: 0 15px; 
   }
 
-  /* @keyframes navLinkFade {
+   /* @keyframes navLinkFade {
     from {
       opacity: 0;
       transform: translateX(100px);
